@@ -1,0 +1,6 @@
+#!/bin/bash
+exec 2>&1
+source /usr/local/etc/envvars
+
+cd /var/wwwroot/default
+exec chpst -uapp /usr/local/bin/php artisan horizon:work
